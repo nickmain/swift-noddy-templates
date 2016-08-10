@@ -1,0 +1,12 @@
+The quick brown fox jumps over the lazy dog
+    `for a in foo {
+    Hey diddle diddle the \(a) and the fiddle
+    and the dish ran away with the spoon
+    `}
+
+Wee Willie Winkie runs through the town,
+Up stairs and down stairs in his night-gown,
+Tapping at the window, crying at the lock,
+Are the children in their bed, for it's past ten o'clock?
+
+""""\\""\"
