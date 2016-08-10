@@ -80,3 +80,5 @@ Are the children in their bed, for it's past ten o'clock?
 
 """"\\""\"
 ```
+
+"Noddy" (British) = "Mickey Mouse" (USA), as in "trivial": https://en.wikipedia.org/wiki/Noddy_(character)#Derivative_uses  
