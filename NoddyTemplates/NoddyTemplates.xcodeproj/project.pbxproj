@@ -11,10 +11,22 @@
 		493211541D5ADC3B00410986 /* NoddyTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493211531D5ADC3B00410986 /* NoddyTemplates.swift */; };
 		493211561D5ADCA100410986 /* NoddyTemplateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493211551D5ADCA100410986 /* NoddyTemplateGenerator.swift */; };
 		4932115C1D5AE9D000410986 /* TestTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932115B1D5AE9D000410986 /* TestTemplate.swift */; };
+		49BF03761E8B182C00B9B658 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF03681E8B17B800B9B658 /* main.swift */; };
+		49BF03771E8B182C00B9B658 /* NoddyTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493211531D5ADC3B00410986 /* NoddyTemplates.swift */; };
+		49BF03781E8B182C00B9B658 /* NoddyTemplateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493211551D5ADCA100410986 /* NoddyTemplateGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		493211471D5ADBAF00410986 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		49BF036D1E8B180200B9B658 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -32,10 +44,19 @@
 		493211551D5ADCA100410986 /* NoddyTemplateGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoddyTemplateGenerator.swift; sourceTree = "<group>"; };
 		493211571D5AE17600410986 /* example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = example; sourceTree = "<group>"; };
 		4932115B1D5AE9D000410986 /* TestTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestTemplate.swift; path = generated/TestTemplate.swift; sourceTree = "<group>"; };
+		49BF03681E8B17B800B9B658 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = generate/main.swift; sourceTree = "<group>"; };
+		49BF036F1E8B180200B9B658 /* ExampleGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExampleGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		493211461D5ADBAF00410986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49BF036C1E8B180200B9B658 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				493211491D5ADBAF00410986 /* NoddyTemplates */,
+				49BF036F1E8B180200B9B658 /* ExampleGenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +86,7 @@
 		4932114B1D5ADBAF00410986 /* NoddyTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				49BF036A1E8B17C600B9B658 /* Generator */,
 				4932115A1D5AE9C200410986 /* Generated */,
 				493211571D5AE17600410986 /* example */,
 				4932114C1D5ADBAF00410986 /* main.swift */,
@@ -79,6 +102,14 @@
 				4932115B1D5AE9D000410986 /* TestTemplate.swift */,
 			);
 			name = Generated;
+			sourceTree = "<group>";
+		};
+		49BF036A1E8B17C600B9B658 /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				49BF03681E8B17B800B9B658 /* main.swift */,
+			);
+			name = Generator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,18 +132,40 @@
 			productReference = 493211491D5ADBAF00410986 /* NoddyTemplates */;
 			productType = "com.apple.product-type.tool";
 		};
+		49BF036E1E8B180200B9B658 /* ExampleGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49BF03731E8B180200B9B658 /* Build configuration list for PBXNativeTarget "ExampleGenerator" */;
+			buildPhases = (
+				49BF036B1E8B180200B9B658 /* Sources */,
+				49BF036C1E8B180200B9B658 /* Frameworks */,
+				49BF036D1E8B180200B9B658 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExampleGenerator;
+			productName = ExampleGenerator;
+			productReference = 49BF036F1E8B180200B9B658 /* ExampleGenerator */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		493211411D5ADBAF00410986 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Nick Main";
 				TargetAttributes = {
 					493211481D5ADBAF00410986 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PYCCFGCM94;
+						ProvisioningStyle = Automatic;
+					};
+					49BF036E1E8B180200B9B658 = {
+						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = PYCCFGCM94;
 						ProvisioningStyle = Automatic;
 					};
@@ -131,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				493211481D5ADBAF00410986 /* NoddyTemplates */,
+				49BF036E1E8B180200B9B658 /* ExampleGenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +198,16 @@
 				4932115C1D5AE9D000410986 /* TestTemplate.swift in Sources */,
 				493211541D5ADC3B00410986 /* NoddyTemplates.swift in Sources */,
 				4932114D1D5ADBAF00410986 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49BF036B1E8B180200B9B658 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49BF03761E8B182C00B9B658 /* main.swift in Sources */,
+				49BF03771E8B182C00B9B658 /* NoddyTemplates.swift in Sources */,
+				49BF03781E8B182C00B9B658 /* NoddyTemplateGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +320,30 @@
 			};
 			name = Release;
 		};
+		49BF03741E8B180200B9B658 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = PYCCFGCM94;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		49BF03751E8B180200B9B658 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = PYCCFGCM94;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +364,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		49BF03731E8B180200B9B658 /* Build configuration list for PBXNativeTarget "ExampleGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49BF03741E8B180200B9B658 /* Debug */,
+				49BF03751E8B180200B9B658 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
